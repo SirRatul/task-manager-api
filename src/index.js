@@ -1,4 +1,6 @@
-const express = require('express')
+const app = require('./app')
+const port = process.env.PORT
+/* const express = require('express')
 require('./db/mongoose')
 const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
@@ -6,7 +8,7 @@ const taskRouter = require('./routers/task')
 const app = express()
 const port = process.env.PORT
 
-app.use(express.json())
+app.use(express.json()) */
 
 /* const router = new express.Router()
 router.get('/test', (req, res) => {
@@ -65,8 +67,8 @@ app.post('/upload', errorMiddleware, (req, res) => {
     res.status(400).send(error.message)
 }) */
 
-app.use(userRouter) 
-app.use(taskRouter)   
+/* app.use(userRouter) 
+app.use(taskRouter)  */  
 app.listen(port, () => {  
     console.log('Server is up on port '+port)
 })
